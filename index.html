@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="angularjs-starter">
+<head>
+  <title>Angular Pikaday Datepicker Directive</title>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="pikaday.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+  <script src="angular-pikaday-datepicker-directive.js"></script>
+  <script>
+      var app = angular.module('angularjs-starter', ['angular.directives-pikaday-datepicker']);
+
+      app.controller('MainCtrl', function($scope) {
+        $scope.dateData = 1370361163
+      });
+      </script>
+</head>
+<body ng-controller="MainCtrl">
+  <h1>Angular Pikaday Datepicker Directive</h1>
+
+  <input type="text" ang:pikaday:datepicker data-datepicker-model="dateData">
+  <p>timestamp: {{dateData}}</p>
+
+  <script src="pikaday.js"></script>
+</body>
+</html>
